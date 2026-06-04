@@ -22,38 +22,48 @@
 ## Что сделано (по шагам)
 
 1. **Настройка VirtualBox** – для всех трёх ВМ выбран тип «Внутренняя сеть», имя сети `intnet`.  
-  <img width="326" height="187" alt="Настройка сети каждой ВМ" src="https://github.com/user-attachments/assets/2cc91c7f-77d8-44b1-b7e1-baf5afe606e4" />
+ 
+<img width="326" height="187" alt="Настройка сети каждой ВМ" src="https://github.com/user-attachments/assets/2cc91c7f-77d8-44b1-b7e1-baf5afe606e4" />
 
 
 2. **Назначение статических IP** – на каждой ВМ прописан свой адрес из подсети 192.168.0.0/24, шлюз не указан (изолированная среда).  
-  <img width="587" height="669" alt="Настройка IP-адресов" src="https://github.com/user-attachments/assets/4b1a6c80-24de-411b-a3e5-0230312257cc" />
+
+<img width="587" height="669" alt="Настройка IP-адресов" src="https://github.com/user-attachments/assets/4b1a6c80-24de-411b-a3e5-0230312257cc" />
 
 
 3. **Переименование компьютеров** – клиентам даны понятные имена `WS-7` и `WS-8`.  
+
 <img width="446" height="610" alt="Переименование компьютеров" src="https://github.com/user-attachments/assets/63269798-1cce-422d-aa81-7d52371e180e" />
 
 
 4. **Установка Active Directory** – на сервере установлена роль AD DS, создан новый лес `POSADKOVAGORDEEVA.kursovaya`.  
+
 <img width="531" height="538" alt="Удаление службы Active Directory" src="https://github.com/user-attachments/assets/a02b7978-dbda-47ee-bce7-632f5212915b" />
 
 5. **Создание пользователя** – добавлен пользователь `Виктория Посадкова` (логин `v.posadkova`), пароль, отключена смена пароля при входе.  
+
 <img width="640" height="277" alt="Создание пользователя" src="https://github.com/user-attachments/assets/dc864227-d398-4203-b103-f0cc0a6818cc" />
 
-6. **Ввод клиентов в домен** – Windows 7 и 8 присоединены к домену через свойства системы.  
-   <img width="598" height="350" alt="Привязка к домену" src="https://github.com/user-attachments/assets/315d2243-91b0-4115-b200-f706a70883b8" />
+6. **Ввод клиентов в домен** – Windows 7 и 8 присоединены к домену через свойства системы.
+
+ <img width="598" height="350" alt="Привязка к домену" src="https://github.com/user-attachments/assets/315d2243-91b0-4115-b200-f706a70883b8" />
 
 
 7. **Общая папка** – на сервере создана папка `C:\Обмен`, открыт общий доступ для всех (чтение/запись). Клиенты видят её по сети.  
 - Создадим папку для общего доступа, чтобы проверить работоспособность:
+
 <img width="485" height="337" alt="Созданная для общего доступа папка" src="https://github.com/user-attachments/assets/74724b85-17ca-41be-ab98-24e1ec0ce2bb" />
 
 
 ## Результаты проверки
 
-- Пинг с клиента до сервера успешен:  <img width="469" height="405" alt="Связь с контроллером домена" src="https://github.com/user-attachments/assets/14b1d272-fbac-472b-b964-c702ef0bf0ab" />
+- Пинг с клиента до сервера успешен:
+
+  <img width="469" height="405" alt="Связь с контроллером домена" src="https://github.com/user-attachments/assets/14b1d272-fbac-472b-b964-c702ef0bf0ab" />
 
  
 - Из проводника клиента открывается `\\192.168.0.1\Обмен`, можно создать/удалить файл.
+
 <img width="477" height="349" alt="Работа сети" src="https://github.com/user-attachments/assets/814fdc67-81bb-4878-ac2a-0817a58759ea" />
 
 
